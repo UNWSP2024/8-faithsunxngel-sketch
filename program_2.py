@@ -10,7 +10,14 @@
 def word_separator(sentence):
 
     new_sentence = ""
-    #    Add your logic here
+    for i, char in enumerate(sentence): 
+        if i == 0:
+            new_sentence += char.upper()
+        elif char.isupper():
+            new_sentence += " " + char.lower()
+        else:
+            new_sentence += char
+    new_sentence += "."
 
     return new_sentence.strip()
 
